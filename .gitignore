@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments and secrets
+.venv/
+venv/
+.env
+
+# Editors, OS and stray browser downloads
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.crdownload
+
+# Output of `python -m src.infer` next to its input
+*_scored.csv
+
+# Local guard written by src/evaluate.py (records which model was evaluated on the
+# test split). Committing it would make every clone refuse to re-evaluate that model.
+reports/.test_eval_lock.json
+
+# Dataset: not committed by default. Only add it if you have the right to publish it
+# (then delete the next line, or force-add with: git add -f data/thms_dataset.csv).
+data/*.csv
